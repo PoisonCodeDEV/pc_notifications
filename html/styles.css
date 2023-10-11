@@ -1,0 +1,199 @@
+@keyframes pulse-green {
+    0% { border-color: #3dd344; box-shadow: 0 0 0 0 rgba(71, 207, 115, 0.7); }
+    50% { border-color: #68ff98; box-shadow: 0 0 0 10px rgba(71, 207, 115, 0); }
+    100% { border-color: #3dd344; box-shadow: 0 0 0 0 rgba(71, 207, 115, 0); }
+}
+
+@keyframes pulse-blue {
+    0% { border-color: #8d46bd; box-shadow: 0 0 0 0 rgba(191, 8, 207, 0.7); }
+    50% { border-color: #a3319d; box-shadow: 0 0 0 10px rgba(47, 131, 255, 0); }
+    100% { border-color: #8d46bd; box-shadow: 0 0 0 0 rgba(47, 131, 255, 0); }
+}
+
+@keyframes pulse-yellow {
+    0% { border-color: #ff9c07; box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.7); }
+    50% { border-color: #ffda2c; box-shadow: 0 0 0 10px rgba(255, 193, 7, 0); }
+    100% { border-color: #ff9c07; box-shadow: 0 0 0 0 rgba(255, 193, 7, 0); }
+}
+
+@keyframes pulse-red {
+    0% { border-color: #dc3545; box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.7); }
+    50% { border-color: #ff6b7f; box-shadow: 0 0 0 10px rgba(220, 53, 69, 0); }
+    100% { border-color: #dc3545; box-shadow: 0 0 0 0 rgba(220, 53, 69, 0); }
+}
+
+@keyframes pulse-grey {
+    0% { border-color: #fffb00; box-shadow: 0 0 0 0 rgba(219, 216, 16, 0.7); }
+    50% { border-color: #9e9c39; box-shadow: 0 0 0 10px rgba(125, 108, 108, 0); }
+    100% { border-color: #fffb00; box-shadow: 0 0 0 0 rgba(108, 117, 125, 0); }
+}
+
+body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    overflow: hidden;
+    margin-right: 3%;
+    margin-top: 100px;
+}
+
+.toast {
+    width: 100px;
+    float: right;
+}
+
+.notifywindow {
+    width: 100px;
+    height: auto;
+    background-color: #1e1e1e;
+    float: right;
+}
+
+.main {
+    margin: 13px 17px 13px 58px;
+    position: relative;
+}
+
+.main::before {
+    font-size: 26px;
+    top: calc(50% - 12px);
+    left: -40px;
+    line-height: 26px;
+    position: absolute;
+}
+
+
+
+.success {
+    background: linear-gradient(-45deg, #123b12, #1a1a1a, #242424);
+    color: #fff;
+    padding: 5px;
+}
+
+.success-icon::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f00c";
+    color: rgba(255, 255, 255, 0.87);
+    display: inline-block; 
+    font-size: 18px;
+    width: 30px; 
+    height: 30px; 
+    background-color: #3dd344; 
+    border-radius: 5px; 
+    text-align: center;
+    line-height: 31px; 
+    margin-top: -4px;
+}
+
+.success-border {
+    border: 3px solid #2e6331;
+    animation: pulse-green 2s infinite;
+    border-radius: 20px;
+}
+
+.info-icon::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f129";
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.87);
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #8d46bd; 
+    border-radius: 5px;
+    text-align: center;
+    line-height: 31px;
+    margin-top: -4px;
+}
+
+.info {
+    background: linear-gradient(-45deg, #321433, #1a1a1a, #242424);
+    color: #fff;
+    padding: 5px;
+}
+
+.info-border {
+    border: 3px solid #8d46bd;
+    animation: pulse-blue 2s infinite;
+    border-radius: 20px;
+}
+
+.warning-icon::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f0f3";
+    color: rgba(255, 255, 255, 0.87); 
+    display: inline-block; 
+    font-size: 15px;
+    width: 30px; 
+    height: 30px; 
+    background-color: #ff9c07; 
+    border-radius: 5px; 
+    text-align: center;
+    line-height: 31px; 
+    margin-top: -4px;
+}
+
+
+.warning {
+    background: linear-gradient(-45deg, #3f2d12, #1a1a1a, #242424);
+    color: #fff;
+    padding: 5px;
+}
+
+.warning-border {
+    border: 3px solid #ff9c07;
+    animation: pulse-yellow 2s infinite;
+    border-radius: 20px;
+}
+
+.error-icon::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f00d";
+    color: rgba(255, 255, 255, 0.87);
+    display: inline-block; 
+    font-size: 20px;
+    width: 30px; 
+    height: 30px; 
+    background-color: #dc3545; 
+    border-radius: 5px; 
+    text-align: center;
+    line-height: 31px; 
+    margin-top: -4px;
+}
+
+.error {
+    background: linear-gradient(-45deg, #411414, #1a1a1a, #242424);
+    color: #fff;
+    padding: 5px;
+}
+
+.error-border {
+    border: 3px solid #dc3545;
+    animation: pulse-red 2s infinite;
+    border-radius: 20px;
+}
+
+.achievement-icon::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f091";
+    color: rgba(32, 32, 32, 0.87); 
+    display: inline-block; 
+    font-size: 15px;
+    width: 30px; 
+    height: 30px; 
+    background-color: #fffb00; 
+    border-radius: 5px; 
+    text-align: center;
+    line-height: 31px; 
+    margin-top: -4px;
+}
+
+.achievement {
+    background: linear-gradient(-45deg, #22220c, #1a1a1a, #242424);
+    color: #fff;
+    padding: 5px;
+}
+
+.achievement-border {
+    border: 3px solid #fffb00;
+    animation: pulse-grey 2s infinite;
+    border-radius: 20px;
+}
